@@ -1,4 +1,6 @@
 class User < ApplicationRecord
-  has_many: favorites
-  has_many: animes
+  has_secure_password
+  validates: email, presence: true, uniqueness: true
+  
+  has_many :favorites
 end
