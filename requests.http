@@ -5,8 +5,7 @@ Content-Type: application/json
 {
   "name": "Colton",
   "email": "colton@test.com",
-  "password": "password",
-  "password_confirmation": "password"
+  "password": "password"
 }
 
 ### Sessions create (login)
@@ -29,9 +28,9 @@ POST http://localhost:3000/animes.json
 Content-Type: application/json
 
 {
-  "name": "Naruto",
-  "image_url": "placeholder",
-  "description": "small kid, big dreams",
+  "name": "Attack on Titan",
+  "image_url": "https://static.wikia.nocookie.net/shingekinokyojin/images/8/8e/The_Wall_Titans_marching.png/revision/latest/scale-to-width-down/1200?cb=20220209092025",
+  "description": "walls and titans",
   "category": "action"
 }
 

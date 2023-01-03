@@ -36,3 +36,4 @@ class AnimesController < ApplicationController
     anime.destroy
     render json: { message: "Anime destroyed successfully" }
   end
+end
