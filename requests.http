@@ -1,12 +1,12 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMSwiZXhwIjoxNjcyOTQzMzkxfQ.UYPrlzCaNsBvvj7Fd9XXyvMWM52MCoW2OgJrQ3CrhDo
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwiZXhwIjoxNjcyOTQ2NTgyfQ.ljz_dPdquffAbD4HDn3TgJb-6CMpI7uCgpvOuFEGF70
 
 ### Users create (signup)
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "bob",
-  "email": "bob@test.com",
+  "name": "amanda",
+  "email": "amanda@test.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -16,7 +16,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "bob@test.com",
+  "email": "amanda@test.com",
   "password": "password"
 }
 
@@ -43,8 +43,18 @@ PATCH http://localhost:3000/animes/2.json
 Content-Type: application/json
 
 {
-  "title": "THE NEW NAME TEST"
+  "title": "Tenshi Muyl"
 }
 
 ### Animes Destroy
 DELETE http://localhost:3000/animes/2.json
+
+
+### FAVORITES CREATE
+POST http://localhost:3000/favorites.json
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+  "id": 4
+}
