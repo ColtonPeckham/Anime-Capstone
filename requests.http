@@ -1,11 +1,14 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMSwiZXhwIjoxNjcyOTQzMzkxfQ.UYPrlzCaNsBvvj7Fd9XXyvMWM52MCoW2OgJrQ3CrhDo
+
 ### Users create (signup)
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Colton",
-  "email": "colton@test.com",
-  "password": "password"
+  "name": "bob",
+  "email": "bob@test.com",
+  "password": "password",
+  "password_confirmation": "password"
 }
 
 ### Sessions create (login)
@@ -13,7 +16,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "colton@test.com",
+  "email": "bob@test.com",
   "password": "password"
 }
 
@@ -21,29 +24,27 @@ Content-Type: application/json
 ### Animes Index
 GET http://localhost:3000/animes.json
 
-
-
 ### Animes Create
 POST http://localhost:3000/animes.json
 Content-Type: application/json
 
 {
-  "name": "Attack on Titan",
+  "title": "Attack on Titan",
   "image_url": "https://static.wikia.nocookie.net/shingekinokyojin/images/8/8e/The_Wall_Titans_marching.png/revision/latest/scale-to-width-down/1200?cb=20220209092025",
   "description": "walls and titans",
   "category": "action"
 }
 
 ### Animes Show
-GET http://localhost:3000/animes/1.json
+GET http://localhost:3000/animes/2.json
 
 ### Animes Update
-PATCH http://localhost:3000/animes/1.json
+PATCH http://localhost:3000/animes/2.json
 Content-Type: application/json
 
 {
-  "name": "THE NEW NAME TEST"
+  "title": "THE NEW NAME TEST"
 }
 
 ### Animes Destroy
-DELETE http://localhost:3000/animes/1.json
+DELETE http://localhost:3000/animes/2.json

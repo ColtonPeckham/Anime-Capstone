@@ -7,7 +7,7 @@ class AnimesController < ApplicationController
 
   def create
     anime = Anime.create(
-      name: params[:name],
+      title: params[:title],
       image_url: params[:image_url],
       description: params[:description],
       category: params[:category],
@@ -23,7 +23,7 @@ class AnimesController < ApplicationController
   def update
     anime = Anime.find_by(id: params[:id])
     anime.update(
-      name: params[:name] || anime.name,
+      title: params[:title] || anime.title,
       image_url: params[:image_url] || anime.image_url,
       description: params[:description] || anime.description,
       category: params[:category] || anime.category,

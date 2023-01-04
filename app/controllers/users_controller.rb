@@ -3,8 +3,8 @@ class UsersController < ApplicationController
     user = User.new(
       name: params[:name],
       email: params[:email],
-      password_digest: params[:password_digest],
-      image_url: params[:image_url]
+      password: params[:password],
+      password_confirmation: params[:password_confirmation],
     )
     if user.save
       render json: { message: "User created successfully" }, status: :created
