@@ -14,5 +14,5 @@ Rails.application.routes.draw do
   post "/users" => "users#create"
 
   # Favorites
-  
+  post "/favorites" => "favorites#create"
 end

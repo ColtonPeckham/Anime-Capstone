@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMiwiZXhwIjoxNjcyOTQ2NTgyfQ.ljz_dPdquffAbD4HDn3TgJb-6CMpI7uCgpvOuFEGF70
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNSwiZXhwIjoxNjcyOTUwNjU4fQ.hgiRaGMmJi-imDdWv3jlj89E3M7yJKHFgF5qZ_x_n2g
 
 ### Users create (signup)
 POST http://localhost:3000/users.json
@@ -36,10 +36,10 @@ Content-Type: application/json
 }
 
 ### Animes Show
-GET http://localhost:3000/animes/2.json
+GET http://localhost:3000/animes/12.json
 
 ### Animes Update
-PATCH http://localhost:3000/animes/2.json
+PATCH http://localhost:3000/animes/12.json
 Content-Type: application/json
 
 {
@@ -47,7 +47,7 @@ Content-Type: application/json
 }
 
 ### Animes Destroy
-DELETE http://localhost:3000/animes/2.json
+DELETE http://localhost:3000/animes/12.json
 
 
 ### FAVORITES CREATE
@@ -56,5 +56,5 @@ Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
 {
-  "id": 4
+  "anime_id": 1
 }
